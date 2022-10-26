@@ -1,1 +1,1 @@
-### Aim of the experiment
+#### Measurement of low resistance by Kelvin’s double bridge.
