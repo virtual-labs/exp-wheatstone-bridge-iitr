@@ -1,39 +1,5 @@
-{
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
-}
+[{"question":"Kelvin’s bridge consists of _________.","answers":{"a":"double bridge","b":"single bridge","c":"half bridge","d":"three fourth bridge"},"correctAnswer":"a"},
+{"question":"The range of resistance measured in a Kelvin bridge is _________.","answers":{"a":"10Ω to 10 mΩ","b":"1Ω to 10 μΩ","c":"0.01Ω to 10 MΩ","d":"0.1Ω to 10 nΩ"},"correctAnswer":"b"},
+{"question":"Accuracy of Kelvin bridge is of the order of _________.","answers":{"a":"±0.5 to ±2 %","b":"±0.05 to ±0.02 %","c":"±0.05 to ±0.2 %","d":"±0.005 to ±0.02 %"},"correctAnswer":"c"},
+{"question":"What is the balance equation of Kelvin bridge?","answers":{"a":"R\u2093 = R\u2082*R\u2083/R\u2081","b":"R\u2093 = R\u2081*R\u2082/R\u2083","c":"R\u2093 = R\u2081/R\u2082","d":"R\u2093 = R\u2081*R\u2083/R\u2082"},"correctAnswer":"d"},
+{"question":"What is the effect of load and contact resistance in Kelvin bridge?","answers":{"a":"independent","b":"fully dependent","c":"partially dependent","d":"depends on the resistance value"},"correctAnswer":"a"}]
