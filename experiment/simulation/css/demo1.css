@@ -20,8 +20,8 @@
 .littledot
 {
     cursor: pointer;
-    width: 5px;
-    height: 5px;
+    width: 12px;
+    height: 12px;
    
     z-index: 5;
     position: absolute;
@@ -51,41 +51,25 @@ background-color: #4CAF50;
 
 /** ELEMENT POSITIONS **/
 #ld1 {
-    top: 20em;
+    top: 17.5em;
     left: 0.5em;
 }
 
 #ld2 {
-    top: 20em;
-    left: 3.5em;
+    top: 17.5em;
+    left: 3em;
 }
 
 #ld3 {
-    top: 11em;
-    left: 15em;
+    top: 9.6em;
+    left: 9.7em;
 }
 
 #ld4 {
-    top: 11em;
-    left: 19em;
+    top: 15em;
+    left: 9.7em;
 }
 
-#ld5 {
-    top: 38em;
-    left: 15em;
-}
-#ld6 {
-    top: 38em;
-    left: 18em;
-}
-#ld7 {
-    top: 38em;
-    left: 23em;
-}
-#ld8 {
-    top: 38em;
-    left: 26em;
-}
 
 
    

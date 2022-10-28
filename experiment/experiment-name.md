@@ -1,1 +1,1 @@
-## Measurement of low resistance by Kelvin’s Double Bridge.
+## Measurement of unknown resistance by Wheatstone’s Bridge.

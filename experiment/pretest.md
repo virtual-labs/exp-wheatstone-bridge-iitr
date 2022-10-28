@@ -1,43 +1,43 @@
-## Pre-test
+## Pre test
 #### Please attempt the following questions
 <br>
 
-Q1. Kelvin’s bridge consists of _________.<br>
+Q1. Wheatstone bridge is a _________.<br>
 
-<b>A   double bridge</b><br>
-B   single bridge<br>
-C   half bridge<br>
-D   three fourth bridge<br><br>
+A   a.c. bridge<br>
+<b>B   d.c. bridge</b><br>
+C   high voltage bridge<br>
+D   power dissipation bridge<br><br>
 
 
-Q2. The range of resistance measured in a Kelvin bridge is _________.<br>
+Q2. Wheatstone bridge is used to measure resistance in the range of _______.<br>
  
-A   10Ω to 10 mΩ<br>
-<b>B   1Ω to 10 μΩ</b><br>
-C   0.01Ω to 10 MΩ<br>
-D   0.1Ω to 10 nΩ<br><br>
+<b>A   1Ω to a few megaohms</b><br>
+B   10kΩ to a few megaohms<br>
+C   100MΩ to a few gegaohms<br>
+D   100Ω to a few teraohms<br><br>
 
 
-Q3. Accuracy of Kelvin bridge is of the order of _________.<br>
+Q3. Wheatstone bridge is used to measure the d.c. resistance of various types of wires for _________.<br>
  
-A   ±0.5 to ±2 %<br>
-B   ±0.05 to ±0.02 %<br>
-<b>C   ±0.05 to ±0.2 %</b><br>
-D   ±0.005 to ±0.02 %<br><br>
+A   determining their effective resistance<br>
+B   computing the power dissipation<br>
+<b>C   quality control of wire</b><br>
+D   maintaining a source of constant e.m.f<br><br>
 
 
 
-Q4. What is the balance equation of Kelvin bridge?<br>
+Q4. Telephone companies make use of the Wheatstone bridge for _________.<br>
 
-A   R<sub>x</sub> = R<sub>2</sub>\*R<sub>3</sub>/R<sub>1</sub><br>
-B   R<sub>x</sub> = R<sub>1</sub>\*R<sub>2</sub>/R<sub>3</sub><br>
-C   R<sub>x</sub> = R<sub>1</sub>/R<sub>2</sub><br>
-<b>D   R<sub>x</sub> = R<sub>1</sub>\*R<sub>3</sub>/R<sub>2</sub></b><br><br>
+A   measuring the telephone resistance<br>
+B   computing the line strength<br>
+C   maintaining dialtone<br>
+<b>D   locating the cable faults</b><br><br>
 
 
-Q5. What is the effect of load and contact resistance in Kelvin bridge?<br>
+Q5. The types of faults in a telephone line are _______.<br>
   
-<b>A   independent</b><br>
-B   fully dependent<br>
-C   partially dependent<br>
-D   depends on the resistance value<br><br>
+<b>A   line to line or line to ground</b><br>
+B   triple line to line or line to ground<br>
+C   open circuit and short circuit<br>
+D   symmetrical and unsymmetrical<br><br>

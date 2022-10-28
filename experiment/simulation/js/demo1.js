@@ -39,111 +39,22 @@ jsPlumb.ready(function () {
     // notice there are no dragOptions specified here, which is different from the
     // draggableConnectors2 demo.  all connections on this page are therefore
     // implicitly in the default scope.
-         endpoint1 = {
+         endpoint = {
             anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth :4, stroke: "rgb(255, 0, 0)" },
+            connectorStyle: { strokeWidth: 5, stroke: "red" },
             endpointsOnTop: true,
             isSource: true,
             maxConnections: 10,
             isTarget: true,
             dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
         },
-        prepare1 = function (elId) {
+
+        prepare = function (elId) {
             initAnimation(elId);
-            return instance.addEndpoint(elId, endpoint1);
+
+            return instance.addEndpoint(elId, endpoint);
         },
-        endpoint2 = {
-            anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth :4, stroke: "rgb(255, 0, 0)" },
-            endpointsOnTop: true,
-            isSource: true,
-            maxConnections: 10,
-            isTarget: true,
-            dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
-        },
-        prepare2 = function (elId) {
-            initAnimation(elId);
-            return instance.addEndpoint(elId, endpoint2);
-        },
-        endpoint3 = {
-            anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth :4, stroke: "rgb(255, 0, 0)" },
-            endpointsOnTop: true,
-            isSource: true,
-            maxConnections: 10,
-            isTarget: true,
-            dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
-        },
-        prepare3 = function (elId) {
-            initAnimation(elId);
-            return instance.addEndpoint(elId, endpoint3);
-        },
-        endpoint4 = {
-            anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth :4, stroke: "rgb(255, 0, 0)" },
-            endpointsOnTop: true,
-            isSource: true,
-            maxConnections: 10,
-            isTarget: true,
-            dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
-        },
-        prepare4 = function (elId) {
-            initAnimation(elId);
-            return instance.addEndpoint(elId, endpoint4);
-        },
-        endpoint5 = {
-            anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth :4, stroke: "blue" },
-            endpointsOnTop: true,
-            isSource: true,
-            maxConnections: 10,
-            isTarget: true,
-            dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
-        },
-        prepare5 = function (elId) {
-            initAnimation(elId);
-            return instance.addEndpoint(elId, endpoint5);
-        },
-        endpoint6 = {
-            anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth :4, stroke: "green" },
-            endpointsOnTop: true,
-            isSource: true,
-            maxConnections: 10,
-            isTarget: true,
-            dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
-        },
-        prepare6 = function (elId) {
-            initAnimation(elId);
-            return instance.addEndpoint(elId, endpoint6);
-        },
-        endpoint7 = {
-            anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth :4, stroke: "rgb(128, 0, 255)" },
-            endpointsOnTop: true,
-            isSource: true,
-            maxConnections: 10,
-            isTarget: true,
-            dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
-        },
-        prepare7 = function (elId) {
-            initAnimation(elId);
-            return instance.addEndpoint(elId, endpoint7);
-        },
-        endpoint8 = {
-            anchor: [0.5, 0.5, 0, -1],
-            connectorStyle: { strokeWidth :7, stroke: "#B1B2B4" },
-            endpointsOnTop: true,
-            isSource: true,
-            maxConnections: 10,
-            isTarget: true,
-            dropOptions: { tolerance: "touch", hoverClass: "dropHover" }
-        },
-        prepare8 = function (elId) {
-            initAnimation(elId);
-            return instance.addEndpoint(elId, endpoint8);
-        },
-       
+
     // this is overridden by the YUI demo.
         createDisc = function () {
             var d = document.createElement("div");
@@ -162,23 +73,19 @@ jsPlumb.ready(function () {
     // get a jsPlumb instance, setting some appropriate defaults and a Container.
     instance = jsPlumb.getInstance({
         DragOptions: { cursor: 'wait', zIndex: 20 },
-         Endpoint: [ "Image", { url: "images/littledot.png" } ],
+        Endpoint: [ "Image", { url: "images/littledot.png" } ],
         
-        Connector: [ "Bezier", { curviness: -50 } ],
+        Connector: [ "Bezier", { curviness: -60 } ],
         Container: "canvas"
     });
 
     // suspend drawing and initialise.
     instance.batch(function () {
-        var e1 = prepare1("ld1"),
-            e2 = prepare2("ld2"),
-            e3 = prepare3("ld3"),
-            e4 = prepare4("ld4"),
-            e5 = prepare5("ld5"),
-            e6 = prepare6("ld6"),
-            e7 = prepare7("ld7"),
-            e8 = prepare8("ld8"),
-           
+        var e1 = prepare("ld1"),
+            e2 = prepare("ld2"),
+            e3 = prepare("ld3"),
+            e4 = prepare("ld4"),
+            
             clearBtn = jsPlumb.getSelector("#anim-clear"),
             addBtn = jsPlumb.getSelector("#add");
 
@@ -214,7 +121,7 @@ document.getElementById("check-button").addEventListener("click", function () {
             }
         ];
 
-        var correct_connections_2_4 = [
+        var correct_connections_2_4= [
             {
                 "source": "ld2",
                 "target": "ld4"
@@ -225,34 +132,7 @@ document.getElementById("check-button").addEventListener("click", function () {
                 "target": "ld2"
             }
         ];
-        var correct_connections_5_6 = [
-            {
-                "source": "ld5",
-                "target": "ld6"
-            },
-    
-            {
-                "source": "ld6",
-                "target": "ld5"
-            }
-        ];
-         var correct_connections_7_8 = [
-            {
-                "source": "ld7",
-                "target": "ld8"
-            },
-    
-            
-        ];
-         var correct_connections_8_5 = [
-            
-    
-            {
-                "source": "ld8",
-                "target": "ld5"
-            }
-        ];
-        
+       
 
 
         var allowed_connections = [
@@ -274,36 +154,14 @@ document.getElementById("check-button").addEventListener("click", function () {
                 "source": "ld4",
                 "target": "ld2"
             },
-            {
-                "source": "ld5",
-                "target": "ld6"
-            },
-    
-            {
-                "source": "ld6",
-                "target": "ld5"
-            },
-             {
-                "source": "ld7",
-                "target": "ld8"
-            },
+          
             
-            
-             {
-                "source": "ld8",
-                "target": "ld5"
-            },
-            
-             
          ];
          var actual_connections = instance.getAllConnections();
 
         var is_connected_1_3= false;
         var is_connected_2_4 = false;
-        var is_connected_5_6 = false;
-        var is_connected_7_8 = false;
-        var is_connected_8_5 = false;
-       
+        
 
         var unallowed_connection_present = false;
 
@@ -345,66 +203,9 @@ document.getElementById("check-button").addEventListener("click", function () {
             }
 
         });
-        actual_connections.forEach(function (connection) {
-            var this_connection = {
-                "source": connection.sourceId,
-                "target": connection.targetId
-            };
-
-            if(!is_connected_5_6){
-                is_connected_5_6 = correct_connections_5_6 .find(function (conn) {
-                    return conn.source === this_connection.source && conn.target === this_connection.target;
-                  });
-            }
-
-           if(!unallowed_connection_present){
-                unallowed_connection_present = !(allowed_connections.find(function (conn) {
-                    return conn.source === this_connection.source && conn.target === this_connection.target;
-                }));
-            }
-
-        });
-        actual_connections.forEach(function (connection) {
-            var this_connection = {
-                "source": connection.sourceId,
-                "target": connection.targetId
-            };
-
-            if(!is_connected_7_8){
-                is_connected_7_8 = correct_connections_7_8 .find(function (conn) {
-                    return conn.source === this_connection.source && conn.target === this_connection.target;
-                  });
-            }
-
-           if(!unallowed_connection_present){
-                unallowed_connection_present = !(allowed_connections.find(function (conn) {
-                    return conn.source === this_connection.source && conn.target === this_connection.target;
-                }));
-            }
-
-        });
-        actual_connections.forEach(function (connection) {
-            var this_connection = {
-                "source": connection.sourceId,
-                "target": connection.targetId
-            };
-
-            if(!is_connected_8_5){
-                is_connected_8_5 = correct_connections_8_5.find(function (conn) {
-                    return conn.source === this_connection.source && conn.target === this_connection.target;
-                  });
-            }
-
-           if(!unallowed_connection_present){
-                unallowed_connection_present = !(allowed_connections.find(function (conn) {
-                    return conn.source === this_connection.source && conn.target === this_connection.target;
-                }));
-            }
-
-        });
        
 
-        if ( is_connected_1_3&&is_connected_2_4&&is_connected_5_6&&is_connected_7_8&&is_connected_8_5&& !unallowed_connection_present) {
+        if ( is_connected_1_3&&is_connected_2_4&& !unallowed_connection_present) {
             alert("correct connection");
             rightconnection=true;
             document.getElementById("mcbb").disabled = false;
@@ -422,7 +223,6 @@ document.getElementById("check-button").addEventListener("click", function () {
 });
 
 
-//Scripting of mcb begins
 
 var mcboffstate=true;
 var were=240;
@@ -443,7 +243,11 @@ function mcbonoff()
         document.getElementById('select_1').disabled = false;
         document.getElementById('select_2').disabled = false;
         document.getElementById('select_3').disabled = false;
+        document.getElementById('select_4').disabled = false;
+        document.getElementById('select_5').disabled = false;
+        document.getElementById('on').disabled = false;
         document.getElementById('mcbb').src="images/mcb2.png";
+        document.getElementById('push1').src='images/push3.png';
         text.value="BALANCED";
         
          
@@ -453,24 +257,44 @@ function mcbonoff()
      }  }     
 }
 
+
+function on()
+{
+   var text=document.getElementById("text_2");
+  var image = document.getElementById('on');
+  if (image.src.match("offimage")) {
+    image.src = "images/onimage.png";
+    text.value="INITIAL"
+  } else {
+    image.src = "images/offimage.jpg";
+    text.value="FINAL"
+  }
+
+}
+
+
 //Scripting of mcb ends
 var op1= document.getElementById("select_1");
 
 var op2 = document.getElementById("select_2");
 var op3= document.getElementById("select_3");
+var op4= document.getElementById("select_4");
+var op5= document.getElementById("select_5");
+
+
 
 
 
 var attcounter=1;
 function addtotable()
         {
-          if(op1.value==2&&op2.value==7&&op3.value==12 )
+          if(op1.value==1&&op2.value==6&&op3.value==15&&op4.value==16&&op5.value==21 )
        {
            
            var currentVal1 = attcounter++;
-  var currentVal2 = 0.1;
-  var currentVal3 = 0.184;
-  var currentVal4 = 0.0184;
+  var currentVal2 = 100;
+  var currentVal3 = 1;
+  var currentVal4 = 100;
  
 
        
@@ -488,14 +312,14 @@ function addtotable()
   document.getElementById("tb1").appendChild(tr);
 
 }
-else if(op1.value==3&&op2.value==8&&op3.value==13 )
+else if(op1.value==2&&op2.value==8&&op3.value==14&&op4.value==19&&op5.value==21)
        {
 
         
            var currentVal1 = attcounter++;
-  var currentVal2 = 1;
-  var currentVal3 = 0.0215;
-  var currentVal4 = 0.0215;
+  var currentVal2 = 984;
+  var currentVal3 = 0.1;
+  var currentVal4 = 98.4;
   
    
   var tr = document.createElement('tr');
@@ -511,13 +335,13 @@ else if(op1.value==3&&op2.value==8&&op3.value==13 )
  
   document.getElementById("tb1").appendChild(tr);
 }
-else if(op1.value==4&&op2.value==9&&op3.value==14 )
+else if(op1.value==3&&op2.value==6&&op3.value==11&&op4.value==16&&op5.value==25)
        {
            
            var currentVal1 = attcounter++;
-  var currentVal2 = 10;
-  var currentVal3 = 0.0025;
-  var currentVal4 = 0.025;
+  var currentVal2 = 10000;
+  var currentVal3 = 0.01;
+  var currentVal4 = 100;
  
   
   var tr = document.createElement('tr');
@@ -534,13 +358,37 @@ else if(op1.value==4&&op2.value==9&&op3.value==14 )
   document.getElementById("tb1").appendChild(tr);
 
 }
-else if(op1.value==5&&op2.value==10&&op3.value==15)
+else if(op1.value==4&&op2.value==10&&op3.value==11&&op4.value==16&&op5.value==21)
        {
            
            var currentVal1 = attcounter++;
-  var currentVal2 = 100;
-  var currentVal3 = 0.0005;
-  var currentVal4 = 0.05;
+  var currentVal2 = 10;
+  var currentVal3 = 10;
+  var currentVal4 = 100;
+  
+  
+  var tr = document.createElement('tr');
+  var td1 = tr.appendChild(document.createElement('td'));
+  var td2 = tr.appendChild(document.createElement('td'));
+  var td3 = tr.appendChild(document.createElement('td'));
+  var td4 = tr.appendChild(document.createElement('td'));
+ 
+  td1.innerHTML=currentVal1;
+  td2.innerHTML=currentVal2;
+  td3.innerHTML=currentVal3;
+  td4.innerHTML=currentVal4;
+ 
+  document.getElementById("tb1").appendChild(tr);
+  
+   
+}
+else if(op1.value==5&&op2.value==7&&op3.value==11&&op4.value==16&&op5.value==21)
+       {
+           
+           var currentVal1 = attcounter++;
+  var currentVal2 = 1;
+  var currentVal3 = 100;
+  var currentVal4 = 100;
   
   
   var tr = document.createElement('tr');
@@ -563,7 +411,7 @@ else
 {
     
     
-     document.getElementById('push').src = "images/push2.png";
+     document.getElementById('push').src = "images/push1.png";
                 return;
     
 }
@@ -572,7 +420,7 @@ else
 }
 function push()
         {
-          if(op1.value==2&&op2.value==7&&op3.value==12 )
+          if(op1.value==1&&op2.value==6&&op3.value==15&&op4.value==16&&op5.value==21 )
        {
        var text=document.getElementById("text_1");    
           
@@ -583,25 +431,34 @@ function push()
    text.value="BALANCED";
 
 }
-else if(op1.value==3&&op2.value==8&&op3.value==13 )
+else if(op1.value==2&&op2.value==8&&op3.value==14&&op4.value==19&&op5.value==21)
        {
 
     var text=document.getElementById("text_1");        
-  rangeChange2();
+  rangeChange1();
   alert("BALANCED CONDITION");
    document.getElementById('push').src = "images/push2.png";
    text.value="BALANCED";
 }
-else if(op1.value==4&&op2.value==9&&op3.value==14 )
+else if(op1.value==3&&op2.value==6&&op3.value==11&&op4.value==16&&op5.value==25)
        {
            
        var text=document.getElementById("text_1");      
-  rangeChange3();
+  rangeChange1();
 alert("BALANCED CONDITION");
    document.getElementById('push').src = "images/push2.png";
    text.value="BALANCED";
 }
-else if(op1.value==5&&op2.value==10&&op3.value==15)
+else if(op1.value==4&&op2.value==10&&op3.value==11&&op4.value==16&&op5.value==21)
+       {
+           
+    var text=document.getElementById("text_1");           
+  rangeChange1();
+   alert("BALANCED CONDITION");
+   document.getElementById('push').src = "images/push2.png";
+   text.value="BALANCED";
+}
+else if(op1.value==5&&op2.value==7&&op3.value==11&&op4.value==16&&op5.value==21)
        {
            
     var text=document.getElementById("text_1");           
@@ -636,14 +493,14 @@ e.onchange = function(){
          var text=document.getElementById("text_1");   
     
         range901();
-        rangeChange5();
+        rangeChange6();
          document.getElementById('push').src = "images/push1.png";
         text.value="UNBALANCED";
     }    
     if (this.value == 2) {
         var text=document.getElementById("text_1");   
         range902();
-        rangeChange6();
+        rangeChange7();
          document.getElementById('push').src = "images/push1.png";
        text.value="UNBALANCED";
     }  
@@ -651,7 +508,7 @@ e.onchange = function(){
        
     var text=document.getElementById("text_1");   
         range903();
-        rangeChange7();
+        rangeChange8();
          document.getElementById('push').src = "images/push1.png";
         text.value="UNBALANCED";
        
@@ -659,8 +516,8 @@ e.onchange = function(){
     if (this.value == 4) {
        var text=document.getElementById("text_1");   
     
-        range908();
-        rangeChange5();
+        range904();
+        rangeChange9();
          document.getElementById('push').src = "images/push1.png";
        text.value="UNBALANCED";
     }
@@ -684,14 +541,14 @@ i.onchange = function(){
          
     var text=document.getElementById("text_1");   
         range906();
-        rangeChange5();
+        rangeChange9();
          document.getElementById('push').src = "images/push1.png";
        text.value="UNBALANCED"; 
     }    
     if (this.value == 7) {
         var text=document.getElementById("text_1");   
         range907();
-        rangeChange5();
+        rangeChange2();
          document.getElementById('push').src = "images/push1.png";
        text.value="UNBALANCED";
     }  
@@ -699,7 +556,7 @@ i.onchange = function(){
        
     var text=document.getElementById("text_1");   
         range908();
-        rangeChange5();
+        rangeChange3();
          document.getElementById('push').src = "images/push1.png";
         text.value="UNBALANCED";
        
@@ -708,7 +565,7 @@ i.onchange = function(){
        
     var text=document.getElementById("text_1");   
         range909();
-        rangeChange5();
+        rangeChange4();
          document.getElementById('push').src = "images/push1.png";
        text.value="UNBALANCED";
     }
@@ -732,7 +589,7 @@ j.onchange = function(){
          
     var text=document.getElementById("text_1");   
         range911();
-        rangeChange5();
+        rangeChange4();
          document.getElementById('push').src = "images/push1.png";
         text.value="UNBALANCED";
     }    
@@ -747,7 +604,7 @@ j.onchange = function(){
        
     var text=document.getElementById("text_1");   
         range913();
-        rangeChange5();
+        rangeChange6();
          document.getElementById('push').src = "images/push1.png";
         text.value="UNBALANCED";
        
@@ -756,7 +613,7 @@ j.onchange = function(){
        var text=document.getElementById("text_1");   
     
         range914();
-        rangeChange5();
+        rangeChange7();
          document.getElementById('push').src = "images/push1.png";
        text.value="UNBALANCED";
     }
@@ -764,12 +621,112 @@ j.onchange = function(){
        var text=document.getElementById("text_1");   
     
         range915();
-        rangeChange5();
+        rangeChange8();
          document.getElementById('push').src = "images/push1.png";
        text.value="UNBALANCED";
     }
    
 };
+
+var k= document.getElementById("select_4");
+var strUser = k.options[k.selectedIndex].value;
+var value = 0;
+k.onchange = function(){  
+    value = this.value;
+   
+    if (this.value == 16) {
+         
+    var text=document.getElementById("text_1");   
+        range916();
+        rangeChange7();
+         document.getElementById('push').src = "images/push1.png";
+        text.value="UNBALANCED";
+    }    
+    if (this.value == 17) {
+        var text=document.getElementById("text_1");   
+        range917();
+        rangeChange8();
+         document.getElementById('push').src = "images/push1.png";
+       text.value="UNBALANCED";
+    }  
+    if (this.value == 18) {
+       
+    var text=document.getElementById("text_1");   
+        range918();
+        rangeChange9();
+         document.getElementById('push').src = "images/push1.png";
+        text.value="UNBALANCED";
+       
+    }
+    if (this.value == 19) {
+       var text=document.getElementById("text_1");   
+    
+        range919();
+        rangeChange2();
+         document.getElementById('push').src = "images/push1.png";
+       text.value="UNBALANCED";
+    }
+     if (this.value == 20) {
+       var text=document.getElementById("text_1");   
+    
+        range920();
+        rangeChange3();
+         document.getElementById('push').src = "images/push1.png";
+       text.value="UNBALANCED";
+    }
+   
+};
+
+
+var l = document.getElementById("select_5");
+var strUser = l.options[l.selectedIndex].value;
+var value = 0;
+l.onchange = function(){  
+    value = this.value;
+   
+    if (this.value == 21) {
+         
+    var text=document.getElementById("text_1");   
+        range921();
+        rangeChange2();
+         document.getElementById('push').src = "images/push1.png";
+        text.value="UNBALANCED";
+    }    
+    if (this.value == 22) {
+        var text=document.getElementById("text_1");   
+        range922();
+        rangeChange3();
+         document.getElementById('push').src = "images/push1.png";
+       text.value="UNBALANCED";
+    }  
+    if (this.value == 23) {
+       
+    var text=document.getElementById("text_1");   
+        range923();
+        rangeChange4();
+         document.getElementById('push').src = "images/push1.png";
+        text.value="UNBALANCED";
+       
+    }
+    if (this.value == 24) {
+       var text=document.getElementById("text_1");   
+    
+        range924();
+        rangeChange5();
+         document.getElementById('push').src = "images/push1.png";
+       text.value="UNBALANCED";
+    }
+     if (this.value == 25) {
+       var text=document.getElementById("text_1");   
+    
+        range925();
+        rangeChange6();
+         document.getElementById('push').src = "images/push1.png";
+       text.value="UNBALANCED";
+    }
+   
+};
+
 
 
 //Scryting of variation of bulbs begins
@@ -783,16 +740,16 @@ j.onchange = function(){
        
     }
     function rangeChange2() {
-      rangeClock1.style.transform = 'rotate(-2deg)';
+      rangeClock1.style.transform = 'rotate(-23deg)';
       
        
   }
   function rangeChange3() {
-    rangeClock1.style.transform = 'rotate(-2deg)';
+    rangeClock1.style.transform = 'rotate(-17deg)';
    
   }
    function rangeChange4() {
-    rangeClock1.style.transform = 'rotate(-2deg)';
+    rangeClock1.style.transform = 'rotate(-11deg)';
    
   }
   function rangeChange5() {
@@ -822,9 +779,11 @@ j.onchange = function(){
 var range90 =  document.querySelector('#knob1');
 var range91 =  document.querySelector('#knob2');
 var range92 =  document.querySelector('#knob3');
+var range93 =  document.querySelector('#knob4');
+var range94 =  document.querySelector('#knob5');
 
  function range901() {
-        range90.style.transform = 'rotate(60deg)';
+        range90.style.transform = 'rotate(180deg)';
     
     }
     function range902() {
@@ -832,7 +791,7 @@ var range92 =  document.querySelector('#knob3');
       
   }
   function range903() {
-    range90.style.transform = 'rotate(180deg)';
+    range90.style.transform = 'rotate(60deg)';
     
   }
    function range904() {
@@ -849,7 +808,7 @@ var range92 =  document.querySelector('#knob3');
         
     } function range907() {
 
-        range91.style.transform = 'rotate(90deg)';
+        range91.style.transform = 'rotate(75deg)';
     
     } function range908() {
         
@@ -857,12 +816,12 @@ var range92 =  document.querySelector('#knob3');
         
     }
      function range909() {
-        range91.style.transform = 'rotate(150deg)';
+        range91.style.transform = 'rotate(165deg)';
         
     }
      function range910() {
         
-        range91.style.transform = 'rotate(180deg)';
+        range91.style.transform = 'rotate(240deg)';
         
     }
      function range911() {
@@ -875,13 +834,55 @@ var range92 =  document.querySelector('#knob3');
     }
      function range913() {
     
-        range92.style.transform = 'rotate(120deg)';
+        range92.style.transform = 'rotate(150deg)';
     }
      function range914() {
         
-        range92.style.transform = 'rotate(150deg)';
+        range92.style.transform = 'rotate(180deg)';
     }
      function range915() {
     
-        range92.style.transform = 'rotate(180deg)';
+        range92.style.transform = 'rotate(240deg)';
     }
+      function range916() {
+    
+        range93.style.transform = 'rotate(60deg)';
+    }
+     function range917() {
+        
+        range93.style.transform = 'rotate(105deg)';
+    }
+     function range918() {
+    
+        range93.style.transform = 'rotate(165deg)';
+    }
+     function range919() {
+        
+        range93.style.transform = 'rotate(210deg)';
+    }
+     function range920() {
+    
+        range93.style.transform = 'rotate(240deg)';
+    }
+      function range921() {
+    
+        range94.style.transform = 'rotate(60deg)';
+    }
+     function range922() {
+        
+        range94.style.transform = 'rotate(90deg)';
+    }
+     function range923() {
+    
+        range94.style.transform = 'rotate(120deg)';
+    }
+     function range924() {
+        
+        range94.style.transform = 'rotate(150deg)';
+    }
+     function range925() {
+    
+        range94.style.transform = 'rotate(240deg)';
+    }
+
+

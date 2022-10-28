@@ -1,1 +1,1 @@
-#### Measurement of low resistance by Kelvin’s double bridge.
+#### To study and perform an experiment to measure the unknown resistance by Wheatstone’s Bridge.
