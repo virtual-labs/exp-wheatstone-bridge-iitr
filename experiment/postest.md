@@ -2,45 +2,47 @@
 #### Please attempt the following questions
 
 <br>
-Q1. The relation between ratio of resistance arms and ratio of resistance arms of second bridge is _________.<br>
-<br>
-A   unequal<br>
-<b>B   equal</b><br>
-C   twice<br>
-D   one forth<br>
-<br>
-
-Q2. Why Kelvin bridge is used for measurement of low resistance?<br> 
-
-A   due to e.m.f source used<br>
-B   due to a large current flow<br>
-<b>C   due to contact and lead resistance</b><br>
-D   due to power dissipation across the circuit<br>
+Q1. How can a Wheatstone bridge be used for the measurement of physical parameters?<br>
+<br> 
+A   in conjunction with a rectifier<br>
+<b>B   along with an op amp</b><br>
+C   by connecting it to a thermistor<br>
+D   by making use of a transducer<br>
 <br>
 
-Q3. What is the condition to achieve a high sensitivity in a Kelvin bridge?<br>
+Q2. By using the variations on a Wheatstone bridge we can _________.<br> 
+ 
+A   measure quantities such as voltage, current and power<br>
+B   measure high resistance values<br>
+C   measure quantities such as complex power<br>
+<b>D   measure quantities such as capacitance, inductance and impedance</b><br>
+<br>
 
-A   low voltage<br>
-B   high power<br>
+Q3. One of the simplest applications of a Wheatstone bridge is _________.<br>
+ 
+A   voltage measurement<br>
+B   current measurement<br>
+<b>C   light measurement</b><br>
+D   power measurement<br>
+<br>
+
+
+Q4. Thermal compensation can be provided in a Wheatstone bridge by _________.<br>
+
+<b>A   using more than one resistive sensor</b><br>
+B   making use of a heat sink<br>
 C   medium resistance<br>
-<b>D   high current</b><br><br>
+D   immersing the circuit into a liquid<br><br>
 
 
-Q4.  Kelvin bridge can be calibrated to read _________.<br>
+Q5. Wheatstone bridge consists of _________.<br>
 
-<b>A   inductance and Quality factor value</b><br>
-B   capacitance only<br>
-C   power and voltage<br>
-D   current and frequency<br><br>
+<b>A   4 resistive arms</b><br>
+B   2 resistive arms<br>
+C   6 resistive armse<br>
+D   8 resistive arms<br>
 
 
-Q5. Why can’t a Kelvin bridge be used for the measurement of low Quality factor value?<br>
-
-A   due to thermoelectric effect<br>
-<b>B   due to balance problem</b><br>
-C   due to the dull detector used<br>
-D   due to temperature<br>
-<br>
 
 
 
