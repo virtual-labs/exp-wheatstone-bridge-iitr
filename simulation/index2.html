@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>VIRTUAL LAB</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta name="" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/KelvinBridge1.css">
+  <link rel="stylesheet" href="css/demo2.css">
+
+</head>
+<body>
+	<div class="box" style="position: absolute;">
+		<div class="container1" style="position:absolute;">
+			<img src="images\Logo.png" width="95px" height="95px" style="margin-left: 5px; float: left;" >
+			<center><h2 >Virtual Labs IIT Roorkee<br>Electrical Measurements Laboratory<br></h2>
+			<h2 style="background-color: black;">Kelvin Double Bridge</h2></center></div>
+			<div style="position: relative; margin-top: 100px;"><br>
+      <br>
+      </div>
+
+
+      <img src="images\mcb1.png"  onclick="mcbonoff();" width="90px" height="180px" style="margin-left:2px; margin-top:3px; position:absolute;"  id ="mcbb"  class="disabled";>
+      <div id="mcb1" style="position:absolute;"></div>
+  <!--mcb ends-->
+  <!--a meter -->
+      <img src="images\A meter.png" width="170px" height="140px" style="margin-left:2px; margin-top:300px; position:absolute;">
+      <div id="Am" style="position:absolute;"></div>
+      <h3 class="text1">AMMETER</h3>
+      <div>
+                        <svg class="meter2">
+                                <polygon id="needle2" class="meter-clock2" points="129,145 137,90 145,145"></polygon>
+                                <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+                        </svg>        
+                   </div>
+
+
+
+      <div class="container2" style="position:absolute;">
+        <h3 class="text3">KELVIN DOUBLE BRIDGE KIT</h3>
+        <img src="images\Galvanometer.png" width="170px" height="150px" style="margin-left:80px; margin-top:300px; position:absolute;">
+        <h3 class="text2">GALVANOMETER</h3>
+         <div>
+                        <svg class="meter1">
+                                <polygon id="needle1" class="meter-clock1" points="129,145 137,90 145,145"></polygon>
+                                <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+                        </svg>        
+                   </div>
+          <img src="images\push2.png" width="40px" id="push" onclick="push()" height="40px" style="margin-left:290px; margin-top:445px;position:absolute;">
+         <input type="text" id="text_1" class="text_1">
+
+        <!--knobs code start-->
+        <div class="k1back" style="position:absolute;">
+          <img src="images\knobs part 1.png" width="80px" height="80px"
+            style="margin-left:25px; margin-top:25px; position:absolute;" id="knob1">
+          <img src="images\knobs part 2.png" width="130px" height="100px"
+            style="margin-left:; margin-top:5px; position:absolute;">
+        </div>
+ <select id="select_1" class="gwd-select-li9t1" disabled="true"><sup >No. Of Bulbs</sup>
+          <option value="0" disabled selected>Multipliers</option>
+          <option value="1">X 0.01</option>
+          <option value="2">X 0.1</option>
+          <option value="3">X 1</option>
+          <option value="4">X 10</option>
+          <option value="5">X 100</option>
+      </select>
+        <div class="k2back" style="position:absolute;">
+          <img src="images\knobs part 1.png" width="80px" height="80px"
+            style="margin-left:25px; margin-top:25px; position:absolute;" id="knob2">
+          <img src="images\knobs part 3.png" width="130px" height="100px"
+            style="margin-left:; margin-top:5px; position:absolute;">
+        </div>
+         <select id="select_2" class="gwd-select-li9t2" disabled="true"><sup >No. Of Bulbs</sup>
+          <option value="0" disabled selected>Ohms</option>
+          <option value="6">0.4</option>
+          <option value="7">0.5</option>
+          <option value="8">0.6</option>
+          <option value="9">0.7</option>
+          <option value="10">0.8</option>
+      </select>
+
+        <div class="k3back" style="position:absolute;">
+          <img src="images\knobs part 1.png" width="80px" height="80px"
+            style="margin-left:25px; margin-top:25px; position:absolute;" id="knob3">
+          <img src="images\knobs part 4.png" width="130px" height="100px"
+            style="margin-left:; margin-top:5px; position:absolute;">
+        </div>
+
+<select id="select_3" class="gwd-select-li9t3" disabled="true"><sup >No. Of Bulbs</sup>
+          <option value="0" disabled selected>Ohms</option>
+          <option value="11">15</option>
+          <option value="12">20</option>
+          <option value="13">25</option>
+          <option value="14">30</option>
+          <option value="15">35</option>
+      </select>
+
+
+        
+      </div>
+
+
+      <div class="dropdown">
+  			<button class="dropbtn">INSTRUCTIONS</button>
+  			<div class="dropdown-content">
+   				<p>Follow these instructions</p>
+   				<b><p>STEP 1 : Make all the Correct Connections.</p></b>
+          <p>1.&nbsp &nbsp M1 of MCB - M3 of KelvinKit.&nbsp &nbsp 2.&nbsp M2 of MCB - M4 of KelvinKit</p>
+          <p>3.&nbsp &nbsp C+ of KelvinKit - P+ of KelvinKit.&nbsp &nbsp 4.&nbsp P- of KelvinKit - C- of KelvinKit</p>
+          <p>5.&nbsp &nbsp C- of KelvinKit - A1 of Ammeter.&nbsp &nbsp 6.&nbsp A2 of Ammeter - C+ of KelvinKit</p>
+          <b><p>STEP 2 : Click on "CHECK" Button. &nbsp &nbsp STEP 3 : Click on the MCB to Turn ON the circuit.</p></b>
+          <b><p>STEP 4 : Select the number from MULTIPLIERS and OHMS from both dropdown.</p></b>
+          <b><p>STEP 5 : Now push the RED buttom to check whether the combination is correct or not.</p></b>
+          <b><p>STEP 6 : If combination is correct perform STEPS 7 and 8 otherwise perform STEP 9</p></b>
+          <b><p>STEP 7 : Note down the readings of the MULTIPLIERS and OHMS when Galvanometer shows zero deflection.</p></b>
+          <b><p>STEP 8 : Click "ADD" button to add the values to the Observation Table.</p></b>
+          <b><p>STEP 9 : Select the different combinations from MULTIPLIERS and OHMS from both dropdown.</p></b>
+          <b><p>STEP 10 : Add different values to the Table by selecting different value of multipliers.</p></b>
+          <b><p>STEP 11 : Click on "PRINT" button to print the page.</p></b>
+  			</div>
+		</div>
+		<div class="jtk-demo-main">
+            <!-- demo -->
+            <div class="jtk-demo-canvas canvas-wide animation-demo jtk-surface jtk-surface-nopan" id="canvas">
+                <div class="littledot" id="ld1"><br><br><a href="#" class="cmdLink detach" rel="ld1" Style="color:orangered"><b>M1</b></a></div>
+                <div class="littledot" id="ld2"></br></br><a href="#" class="cmdLink detach" rel="ld2" Style="color:orangered"><b>M2</b></a></div>
+                <div class="littledot" id="ld3"></br><a href="#" class="cmdLink detach" rel="ld3" Style="color:orangered">M3</a></div>
+                <div class="littledot" id="ld4"></br><a href="#" class="cmdLink detach" rel="ld4" Style="color:orangered">M4</a></div>
+                <div class="littledot" id="ld5"></br><a href="#" class="cmdLink detach" rel="ld5" Style="color:orangered">C+</a></div>           
+                <div class="littledot" id="ld6"></br><a href="#" class="cmdLink detach" rel="ld6" Style="color:orangered">P+</a></div>
+                 <div class="littledot" id="ld7"></br><a href="#" class="cmdLink detach" rel="ld7" Style="color:orangered">P-</a></div>
+                <div class="littledot" id="ld8"></br><a href="#" class="cmdLink detach" rel="ld8" Style="color:orangered">C-</a></div>
+                <div class="littledot" id="ld9"></br></br><a href="#" class="cmdLink detach" rel="ld9" Style="color:orangered"><b>A1</b></a></div>
+                <div class="littledot" id="ld10"></br></br><a href="#" class="cmdLink detach" rel="ld10" Style="color:orangered"><b>A2</b></a></div>
+<br><br>
+
+            
+        </div><br>
+       
+        <!-- JS -->
+        <script src="js/jsplumb1.js"></script>
+
+		<input type="button" value="ADD" id="add" style="position:absolute; top: 670px;" onclick="addtotable();">
+		<input type="button" value="RESET" id="reset" id="button"   style="position:absolute; top:670px;left:360px;" onclick="window.location.href ='index2.html';">
+		<input type="button" value="CHECK" class="check" id="check-button" style="position:absolute; top:670px;left:510px;">
+		<input type="button" value="PRINT" id="print" style="position:absolute; top:670px;left:665px" onclick="window.print()">	
+
+		<div class="formula" style="position:absolute;">
+  			<h2><u>FORMULA</u></h2>
+  			<div><p>1. Find P/Q while </p>
+  				<p>2. XL=P/Q*R </p>
+  				<p>3. XT=P/Q*R</p>
+  				<p>4. XA=XT-XL</p>
+  				<p>where,P,Q,R are the resistor and XL,XT,XA are the resistance</p>
+			</div>
+		</div>
+
+
+		<div style="margin-top: 345px; position:absolute;">
+			<table class="a" id="tb1" style="margin-left: 870px;">
+  			<tbody>
+				<tr>
+          <th>S.NO.</th>
+          <th>P/Q</th>
+          <th>R*(0.001 OHMS)</th>
+          <th>XT=P/Q*R</th>
+          <th>XA=XT-XL</th>
+        </tr>
+  			</tbody>
+			</table>
+		</div>
+
+		<div class="copyright" style="position:absolute">&copyCopyright 2022 Virtual Labs, IIT Roorkee</div>
+                 
+    </div>
+<script src="js/demo3.js"></script>   
+</body>
+</html>
