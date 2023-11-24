@@ -1,6 +1,6 @@
 .text_1
 {
-    width: 90px;
+    width: 95px;
      margin-top: 472px;
     margin-left: 315px;
 }
@@ -36,37 +36,34 @@ height:730px;
 width:1510px;
 margin:auto;
 border:4px solid black;
-/*margin-right:60px;*/
 background-color:rgb(237, 236, 236);
 }
-.container1{
 
-background-color: #0A1393;
-/*border: 2px solid black;*/
+.container1{
+background-color: #bb2525;
 width:1510px;
 height:120px;
 color:white;
 }
+
 .copyright{
 height:20px;	
 width:1510px;
-background-color:#0A1393;
-/*border:2px solid black;*/
+background-color: black;
 top:710px;
+padding-top: 3px;
 color:white;
 border: auto;
 text-align: center;
-/*margin-left:60px;
-margin-right:60px;*/
-
 }
+
 .container2{
 	width: 870px;
-	height:500px;
+	height:510px;
 	background-color: #000000;
-	margin-top: -47px;
+	margin-top: -43px;
 	margin-left:110px;
-	border:20px solid #D36B19;
+	border:10px solid #d34e19;
 }
 
 .k1back{
@@ -110,7 +107,6 @@ margin-right:60px;*/
 
 /*resistance*/
 
-
 .R1back{
   width: 140px;
   height: 25px;
@@ -140,15 +136,25 @@ margin-right:60px;*/
   background-color: #4CAF50;
   border: none;
   color: white;
-  border-radius: 4px;
-  padding: 10px 32px;
+  border-radius: 11px;
+  padding: 8px 18px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 17px;
   cursor: pointer;
-  
+  box-shadow: 5px 5px 5px darkgreen;
 }
+
+#add:hover{
+  background-color: rgb(42, 153, 42);
+}
+
+#add:active {
+  background-color: rgb(42, 153, 42);
+  transform: translateY(4px);
+}
+
 .gwd-select-li9t1 {
       position: absolute;
       height: 24px;
@@ -189,42 +195,76 @@ margin-right:60px;*/
       width: 69px;
       transform-origin: 34.4px 12px 0px;
     }
+
 .check{
   background-color: #4CAF50;
   border: none;
   color: white;
-  border-radius: 4px;
-  padding: 10px 32px;
+  border-radius: 11px;
+  padding: 8px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 17px;
   cursor: pointer;
+  box-shadow: 5px 5px 5px darkgreen;
 }
+
+.check:hover{
+  background-color: rgb(42, 153, 42);
+}
+
+.check:active {
+  background-color: rgb(42, 153, 42);
+  transform: translateY(4px);
+}
+
 .reset{
   background-color: #4CAF50;
   border: none;
   color: white;
-  border-radius: 4px;
-  padding: 10px 32px;
+  border-radius: 11px;
+  padding: 8px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 17px;
   cursor: pointer;
+  box-shadow: 5px 5px 5px darkgreen;
 }
+
+.reset:hover{
+  background-color: rgb(42, 153, 42);
+}
+
+.reset:active {
+  background-color: rgb(42, 153, 42);
+  transform: translateY(4px);
+}
+
 #print{
   background-color: #4CAF50;
   border: none;
   color: white;
-  border-radius: 4px;
-  padding: 10px 32px;
+  border-radius: 11px;
+  padding: 8px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 17px;
   cursor: pointer;
+  box-shadow: 5px 5px 5px darkgreen;
 }
+
+#print:hover{
+  background-color: rgb(42, 153, 42);
+}
+
+#print:active {
+  background-color: rgb(42, 153, 42);
+  transform: translateY(4px);
+}
+
 .formula{
 margin-left:1050px;
 margin-top:15px;
@@ -234,22 +274,26 @@ border:1px solid black;
 background-color:rgb(252, 252, 252);
 padding:1px 12px 1px 12px;
 }
+
 /*Dropdown css*/
 .dropbtn {
-  background-color: #4CAF50;
+  position: absolute;
+  background-color: #3387cc;
   border: none;
   color: white;
-  border-radius: 4px;
-  padding: 12px 24px;
+  border-radius: 6px;
+  padding: 9px 7px;
+  letter-spacing: 2px;
+  box-shadow: 4px 4px 4px black;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
-  height:40px;
-  width:160px;
-  margin-left: 1250px;
-  margin-top: 10px;
+  height: 34px;
+  width: 149px;
+  margin-left: 1299px;
+  margin-top: 15px;
 }
 .dropdown {
   position: absolute;
@@ -260,12 +304,14 @@ padding:1px 12px 1px 12px;
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 550px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  margin-left: 950px;
-  margin-top: 5px;
+  min-width: 480px;
+  box-shadow: 8px 8px 11px 0px rgba(0,0,0,0.8);
+  margin-left: 1011px;
+  margin-top: 58px;
   z-index:2;
-  font-size: 13px;
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 4px;
 }
 .dropdown-content a {
   color: black;
@@ -275,7 +321,62 @@ padding:1px 12px 1px 12px;
 }
 .dropdown-content a:hover {background-color: #ddd;}
 .dropdown:hover .dropdown-content {display: block;}
-.dropdown:hover .dropbtn {background-color: #3e8e41;
+.dropdown:hover .dropbtn {background-color: crimson;
+}
+
+/* Balanced Cond Button CSS */
+
+.bal-btn{
+  position: absolute;
+  background-color: #009688;
+  border: none;
+  color: white;
+  box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.8);
+  border-radius: 6px;
+  padding: 9px 7px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  height: 35px;
+  width: 182px;
+  margin-left: 1050px;
+  margin-top: 15px;
+
+}
+
+.bal-cond{
+  position: absolute;
+  display: inline-block;
+}
+ 
+.drop-content{
+  padding-left: 10px;
+  position: absolute;
+  min-width: 150px;
+  height: 80px;
+  margin-left: 1054px;
+  margin-top: 56px;
+  z-index:2;
+  font-size: 16px;
+}  
+
+.drop-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  /* display: block;  */
+}
+
+.bal-btn:hover {
+  background-color: forestgreen;
+}
+
+.bal-btn:active {
+  background-color: rgb(42, 153, 42);
+  transform: translateY(4px);
 }
 
 /*end of dropdown css*/
@@ -287,7 +388,7 @@ table {
 th,td {
   border: 1px solid black;
   padding:1px ;
-   
+  text-align: center; 
 }
 table.a {
 /*float: right;*/
@@ -298,7 +399,7 @@ table.a {
 	height:30px;
 	width: 76px;
 	border:2px solid black;
-	margin-left:2px;
+	margin-left:9.2px;
 	margin-top:157px;
 }
 
