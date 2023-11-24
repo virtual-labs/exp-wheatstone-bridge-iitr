@@ -4,7 +4,7 @@
 <b>Discipline | <b>Electrical Engineering
 :--|:--|
 <b> Lab | <b> Electrical Measurements Lab
-<b> Experiment|     <b> Measurement of unknown resistance by wheatstone bridge.
+<b> Experiment|     <b>2. Measurement of unknown resistance by wheatstone bridge.
 
 ### About the Experiment 
 

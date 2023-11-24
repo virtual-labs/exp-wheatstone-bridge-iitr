@@ -52,28 +52,23 @@ background-color: #4CAF50;
 /** ELEMENT POSITIONS **/
 #ld1 {
     top: 17.5em;
-    left: 0.5em;
+    left: 1em;
 }
 
 #ld2 {
     top: 17.5em;
-    left: 3em;
+    left: 3.5em;
 }
 
 #ld3 {
     top: 9.6em;
-    left: 9.7em;
+    left: 8.6em;
 }
 
 #ld4 {
     top: 15em;
-    left: 9.7em;
+    left: 8.6em;
 }
-
-
-
-   
-
 
 path, .jtk-endpoint {
     cursor: pointer;
