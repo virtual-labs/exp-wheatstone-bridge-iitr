@@ -1,4 +1,4 @@
-## Introduction
+### Introduction
 
 <div style="text-align: justify; font-size: 18px;font-family: 'Nunito Sans',sans-serif;">
 Wheatstone bridge also known as the resistance bridge, calculates the unknown resistance by balancing two legs of the bridge circuit. One leg includes the component of unknown resistance. Samuel Hunter Christie invented the Wheatstone bridge in 1833, which Sir Charles Wheatstone later popularised in 1843.<br>
