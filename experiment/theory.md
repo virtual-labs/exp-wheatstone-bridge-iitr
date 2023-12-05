@@ -32,7 +32,7 @@ The current enters the galvanometer and divides into two equal magnitude current
 
 <center>
 
-$I_1P = I_2R......(1)$
+$$I_1P = I_2R......(1)$$
 
 </center>
 
@@ -40,13 +40,13 @@ The currents in the bridge, in a balanced condition, are expressed as follows:
 
 <center>
 
-$I_1 = I_3 = \frac{E}{P+Q}$ 
+$$I_1 = I_3 = \frac{E}{P+Q}$$ 
 
 </center>
 
 <center>
 
-$I_2 = I_4 = \frac{E}{R+S}$  
+$$I_2 = I_4 = \frac{E}{R+S}$$  
 
 </center>
 
@@ -56,37 +56,37 @@ By substituting the value of I<sub>1</sub> and I<sub>2</sub> in equation (1), we
 
 <center>
 
-$\frac{PE}{P+Q} = \frac{RE}{R+S}$
+$$\frac{PE}{P+Q} = \frac{RE}{R+S}$$
 
 </center>
 
 <center>
 
-$\frac{P}{P+Q} = \frac{R}{R+S}$
+$$\frac{P}{P+Q} = \frac{R}{R+S}$$
 
 </center>
 
 <center>
 
-$P(R+S) = R(P+Q)$
+$$P(R+S) = R(P+Q)$$
 
 </center>
 
 <center>
 
-$PR + PS = PR + QR$
+$$PR + PS = PR + QR$$
 
 </center>
 
 <center>
 
-$PS = QR.......(2)$
+$$PS = QR.......(2)$$
 
 </center>
 
 <center>
 
-$R = \frac{P}{Q}*S......(3)$
+$$R = \frac{P}{Q}*S......(3)$$
 
 </center>
 
