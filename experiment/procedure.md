@@ -1,5 +1,3 @@
-## Procedure<br>
-
 **STEP 1 :** Make Connections as per the instructions given below:  
 1.    M<sub>1</sub> of MCB - Main<sub>1</sub>  
 2.    M<sub>2</sub> of MCB - Main<sub>2</sub>  
