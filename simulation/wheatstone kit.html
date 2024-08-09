@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+  <title>Virtual Labs | Wheatstone Bridge</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+        <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+      
+        <link rel="stylesheet" href="css/demo1.css">
+        <link rel="icon" href="./images/Vlab logo.jpg" type="image/x-icon">
+  
+  
+
+	<link rel="stylesheet" type="text/css" href="css/bridge.css">
+ 
+
+</head>
+<body data-demo-id="animation">
+	<div class="box" style="position: absolute;">
+		<div class="container1" style="position:absolute;">
+			<img src="images\Logo.png" width="95px" height="92.5px" style="margin-left: 5px; float: left;" >
+			<center><h2 >Virtual Labs IIT Roorkee<br>Electrical Measurements Laboratory<br></h2>
+			<h2 style="background-color: black;">Wheatstone Bridge</h2></center>
+
+    </div>
+
+			<div style="position: relative; margin-top: 100px;"><br>
+
+      </div>
+
+
+      <img src="images\mcb1.png"  onclick="mcbonoff();" width="80px" height="150px" style="margin-left:9px; margin-top:10px; position:absolute;" id ="mcbb" >
+      <b> <p style="position:absolute; color: black; margin-left: 26px; margin-top:117px; font-size: 20px;">MCB</p></b>
+
+
+      <div id="mcb1" style="position:absolute;">
+        
+      </div>
+
+      <!--mcb ends-->
+      <!--a meter -->
+      <!--<img src="images\A meter.png" width="170px" height="140px" style="margin-left:2px; margin-top:300px; position:absolute;">
+      <div id="Am" style="position:absolute;"></div>
+      <h3 class="text1">AMMETER</h3>-->
+
+
+
+      <div class="dropdown">
+        <button class="dropbtn">INSTRUCTIONS</button>
+        <div class="dropdown-content">
+          <p><b>STEP 1 :</b> Make Connections as per the instructions given below:</p>                 
+          <p>1.&nbsp &nbsp M1 of MCB - Main1</p>
+          <p>2.&nbsp &nbsp M2 of MCB - Main2</p>
+          <p><b>STEP 2 :</b> Click on <b>"CHECK"</b> Button for checking the connections.</p>
+          <p><b>STEP 3 :</b> Click on the MCB to Turn ON the circuit.</p>
+          <p><b>STEP 4 :</b> Set each knob from dropdown to 0.</p>
+          <p><b>STEP 5 :</b> Now, vary S1 knob by selecting the value from dropdown.</p>
+          <p><b>STEP 6 :</b> Now push the RED circular button to check whether the condition is balanced or not.</p>
+          <p><b>STEP 7 :</b> Repeat steps 5 to 6 till Galvanometer shows 0 deflection. If not then set knob to 0 again.</p>
+          <p><b>STEP 8 :</b> Now, Vary S2 knob and push the RED circular button to check whether the condition is balanced or not for each value from dropdown.</p>
+          <p><b>STEP 9 :</b> Now if condition is balanced, Click on <b>"ADD"</b> button to add the readings to the Observation Table. </p>
+          <p><b>STEP 10 :</b> If condition is not balanced choose another combination of knobs & the <b>Balanced Condition Button</b> becomes active after wrong combination alert.</p>
+          <p><b>STEP 11 :</b> Click on <b>"PRINT"</b> button to print the webpage.</p>
+          <p><b>STEP 12 :</b> Click on <b>"RESET"</b> button to reset the webpage.</p>
+        </div>
+    </div>
+
+    <div class="bal-cond">
+      <button class="bal-btn" id="btn" >Balanced Condition</button>
+      <div class="drop-content" id="drop">
+         
+      </div>
+    </div>
+
+    <!-- <div class="bal-cond">
+      <button class="bal-btn"  id="btn">Balanced Condition</button>
+      <div class="drop-content" id="drop" >
+        <img id="image" src="images\Balanced Cond.png"  style="display:none;" />
+         
+      </div>
+    </div> -->
+   
+
+
+<div class="jtk-demo-main">
+            <!-- demo -->
+            <div class="jtk-demo-canvas canvas-wide animation-demo jtk-surface jtk-surface-nopan" id="canvas">
+                <div class="littledot" id="ld1"><br><br><a href="#" class="cmdLink detach" rel="ld1" id="dis1" Style="color:orangered">M1</a></div>
+                <div class="littledot" id="ld2"><br><br><a href="#" class="cmdLink detach" rel="ld2" id="dis2" Style="color:orangered">M2</a></div>
+                <div class="littledot" id="ld3"><br><a href="#" class="cmdLink detach" rel="ld3" id="dis3" Style="color:orangered;position: absolute; top: 25px;">Main1</a></div>
+                <div class="littledot" id="ld4"><br><a href="#" class="cmdLink detach" rel="ld4" id="dis4" Style="color:orangered; position: absolute; top: 25px;">Main2</a></div>              
+<br><br>
+            
+        </div><br>
+       
+
+        <!-- JS -->
+        <script src="js/jsplumb1.js"></script>
+        <!-- /JS -->
+
+    <!--  demo code -->
+    
+
+      <div class="container2" style="position:absolute;">
+        <h3 class="text3">WHEATSTONE BRIDGE KIT</h3>
+
+        <img src="images\Galvanometer.png" width="170px" height="150px" style="margin-left:60px; margin-top:300px; position:absolute;">
+        <h3 class="text2">GALVANOMETER</h3>
+         <div>
+                        <svg class="meter1">
+                                <polygon id="needle1" class="meter-clock1" points="129,145 137,90 145,145"></polygon>
+                                <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+                        </svg>        
+                   </div>
+<img src="images\push1.png" id="switch" width="30px" id="push1" height="30px" style="margin-left:25px; margin-top:65px;position:absolute;" >
+        
+        <!--<div>
+                        <svg class="meter1">
+                                <polygon id="needle1" class="meter-clock1" points="129,145 137,90 145,145"></polygon>
+                                <circle class="meter-circle" r="10" cx="137" cy="145"></circle>
+                        </svg>        
+                   </div>-->
+        <img src="images\push1.png" width="40px" id="push" onclick="push()" onclick="rotate()" height="40px" style="margin-left:270px; margin-top:458px;position:absolute;" >
+        <input type="text" id="text_1" class="text_1" disabled>
+         <!-- <img src="images\offimage.jpg" id="on" onclick="on()" width="70px" height="30px" style="margin-left:-165px; margin-top: 230px; position:absolute;z-index: 3;"> -->
+          <!-- <b> <p style="position:absolute;color:white;margin-left:160px;margin-top:-224px;">INITIAL-FINAL SWITCH</p></b>  -->
+         <!-- <input type="text" id="text_2" class="text_2" disabled> -->
+    
+    
+
+        <!--knobs code start-->
+        <h5 class="text6">P/Q Ratio</h5>
+        <h4 class="text7">S1</h4>
+        <h4 class="text8">S2</h4>
+        <h4 class="text9">S3</h4>
+        <h4 class="text10">S4</h4>
+        <div class="k1back" style="position:absolute;">
+          <img src="images\knobs part 1.png" width="80px" height="80px"
+            style="margin-left:25px; margin-top:25px; position:absolute;" id="knob1">
+          <img src="images\knobs part 2.png" width="130px" height="102px"
+            style=" margin-top:3px; position:absolute;">
+        </div>
+        <select id="select_1" class="gwd-select-li9t1" disabled="true">
+          <!-- <option value="0" disabled selected>RANGE MULTIPLIER</option> -->
+          <option value="1">1</option>
+          <!--<option value="4">10</option>
+          <option value="2">0.1</option>
+          <option value="3">0.01</option>
+          <option value="5">100</option> -->
+        </select>
+        <div class="k2back" style="position:absolute;">
+          <img src="images\knobs part 1.png" width="80px" height="80px"
+            style="margin-left:25px; margin-top:25px; position:absolute;" id="knob2">
+          <img src="images\knobp.png" width="130px" height="102px"
+            style="margin-top:3px; position:absolute;">
+        </div>
+        <select id="select_2" class="gwd-select-li9t2" disabled="true">
+          <option value="0" disabled selected>X 1&#8486;</option>
+          <option value="6">0</option>
+          <option value="7">1</option>
+          <option value="8">4</option>
+          <option value="9">7</option>
+          <option value="10">10</option>
+        </select>
+        <div class="k3back" style="position:absolute;">
+          <img src="images\knobs part 1.png" width="80px" height="80px"
+            style="margin-left:25px; margin-top:25px; position:absolute;" id="knob3">
+          <img src="images\knobp.png" width="130px" height="102px"
+            style=" margin-top:3px; position:absolute;">
+        </div>
+        <select id="select_3" class="gwd-select-li9t3" disabled="true" >
+          <option value="0" disabled selected>X 10&#8486;</option>
+          <option value="11">0</option>
+          <option value="12">2</option>
+          <option value="13">6</option>
+          <option value="14">8</option>
+          <option value="15">10</option>
+        </select>
+
+
+        <div class="k4back" style="position:absolute;">
+          <img src="images\knobs part 1.png" width="80px" height="80px"
+            style="margin-left:25px; margin-top:25px; position:absolute;" id="knob4">
+          <img src="images\knobp.png" width="130px" height="102px"
+            style=" margin-top:3px; position:absolute;">
+        </div>
+        <select  id="select_4" class="gwd-select-li9t4" disabled="true" >
+          <option value="0" disabled selected>X 100&#8486;</option>
+          <option value="16">0</option>
+          <option value="17">3</option>
+          <option value="18">7</option>
+          <option value="19">9</option>
+          <option value="20">10</option>
+        </select>
+
+
+        <div class="k5back" style="position:absolute;">
+          <img src="images\knobs part 1.png" width="80px" height="80px"
+            style="margin-left:25px; margin-top:25px; position:absolute;" id="knob5">
+          <img src="images\knobp.png" width="130px" height="102px"
+            style=" margin-top:3px; position:absolute;">
+        </div>
+        <select id="select_5" class="gwd-select-li9t5" disabled="true" >
+          <option value="0" disabled selected>X 1000&#8486;</option>
+          <option value="21">0</option>
+          <option value="22">2</option>
+          <option value="23">4</option>
+          <option value="24">6</option>
+          <option value="25">10</option>
+        </select>
+<!--<img src="littledot.png"  style="margin-left:222px; margin-top:468px;position:absolute;z-index: 3;">
+<img src="littledot.png" style="margin-left:95px; margin-top:468px;position:absolute;z-index: 3;">
+
+        <div class="R1back" style="position:absolute;">
+          <img src="images\resistance.png" width="120px" height="20px" style="margin-left:10px; margin-top: 2.5px; position:absolute;">
+        </div>
+
+        <h5 class="text5">UNKNOWN RESISTANCE</h5>-->
+
+
+        <div class="wheatstoneimg" style="position:absolute;">
+          <img src="images\wheatstoneb12.jpg" width="140px" height="170px" style="margin: auto; position: absolute;" >
+          
+        </div>
+
+        
+
+
+        
+      </div>
+
+
+      
+
+
+
+      <div class="btn" style="position:absolute; margin-left: 150px; margin-top: -172px;">    
+          <input type="button" value="CHECK" class="check" id="check-button" style="position:absolute; top:665px;left:150px;">
+		      <input type="button" value="ADD" id="add" disabled style="position:absolute; top: 665px; left:280px;" onclick="addtotable();">
+		      <input type="button" value="RESET" class="reset" id="button" style="position:absolute; top:665px;left:390px;" onclick="window.location.href = 'wheatstone kit.html';">
+		      <input type="button" value="PRINT" id="print" style="position:absolute; top:665px;left:515px" onclick="window.print()">
+      </div>	
+
+		<div class="formula" style="position:absolute;">
+  			<center><h2><u>FORMULA</u></h2></center>
+        <p>1. Ratio P/Q(Multipliers) = Ratio Arm </p>
+        <p>2. R = S * Ratio</p>
+  			<p>3. Adding values of x1,x10, x100 & x1000 &#8486; to find S</p>
+        <p> Where R,S are the Unknown Resistance and Total Resistance respectively. </p>
+  			
+			</div>
+		</div>
+
+
+		<div style="margin-top: 300px; position:absolute;">
+      <h3 style="position:absolute; margin-top: -27px; margin-left: 1150px; ">OBSERVATION TABLE</h3>
+			<table class="a" id="tb1" style="margin-left: 1050px;">
+  			<tbody>
+				<tr>
+          <th>S.No.</th>
+          <th>Total resistance(S) &#8486;</th>
+          <th>Ratio &#8486;</th>
+          <th>R = S * Ratio (&#8486;)</th>
+        </tr>
+  			</tbody>
+			</table>
+		</div>
+
+		<div class="copyright" style="position:absolute">&#169 2022 Virtual Labs, IIT Roorkee</div>
+              
+    </div>
+
+</body>
+  <script src="js/demo1.js"></script>
+  <script src="js/demo2.js"></script>
+</html>

@@ -1,0 +1,8 @@
+[{"question":"How can a Wheatstone bridge be used for the measurement of physical parameters?","answers":{"a":"in conjunction with a rectifier","b":"by connecting it to a thermistor","c":"twice","d":"by making use of a transducer"},"correctAnswer":"b"},
+{"question":"By using the variations on a Wheatstone bridge we can _________.","answers":{"a":"measure quantities such as voltage, current and power","b":"measure high resistance values","c":"measure quantities such as complex power","d":"measure quantities such as capacitance, inductance and impedance"},"correctAnswer":"d"},
+{"question":"One of the simplest applications of a Wheatstone bridge is ________.","answers":{"a":"voltage measurement","b":"current measurement","c":"light measurement","d":"power measurement"},"correctAnswer":"c"},
+{"question":"Thermal compensation can be provided in a Wheatstone bridge by ________.","answers":{"a":"using more than one resistive sensor","b":"making use of a heat sink","c":"using cooling fans","d":"immersing the circuit into a liquid"},"correctAnswer":"a"},
+{"question":"Wheatstone bridge consists of _________.","answers":{"a":"4 resistive arms","b":"2 resistive arms","c":"6 resistive arms","d":"8 resistive arms"},"correctAnswer":"a"}]
+
+
+
